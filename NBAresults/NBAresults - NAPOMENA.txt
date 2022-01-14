@@ -1,0 +1,14 @@
+NBAresults.html otvoriti preko Live servera da bi JS mogao da učita db.json
+
+Drugi način je da se db.json učita preko JSON servera: https://github.com/typicode/json-server
+Preporuka je da se koristi NPM (Node Package Manager),
+za koji je dovoljno instalirati NodeJS: https://nodejs.org/en/
+
+Tada treba imati u vidu da JSON server ne vraća ceo sadržaj JSON fajla,
+već ako JSON fajl sadrži nizove objekata određenog naziva, tada
+JSON server omogućava pristup pojedinim nizovima preko naziva svakog niza
+kao deo URL-a.
+U konkretnom primeru, objektima u nizu "teams" pristupa se preko
+URL-a: http://localhost:3000/teams
+Ako JSON sadrži niz objekata, JSON server omogućava čitanje svakog od
+tih nizova preko posebnog URL-a, analogno gornjem primeru.
